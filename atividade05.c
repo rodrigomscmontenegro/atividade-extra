@@ -25,7 +25,6 @@ int main() {
     printf("Quantos produtos deseja cadastrar? ");
     scanf("%d", &n);
 
-    // Alocação dinâmica do array de Produto
     Produto *estoque = (Produto *)malloc(n * sizeof(Produto));
 
     if (estoque == NULL) {
@@ -33,7 +32,6 @@ int main() {
         return 1;
     }
 
-    // Preenchimento iterando com ponteiros
     for (int i = 0; i < n; i++) {
         (estoque + i)->id = i + 1;
         printf("Digite o preco do produto %d: R$ ", i + 1);
@@ -43,7 +41,6 @@ int main() {
     printf("\n=== Produtos cadastrados ===");
     imprimir_produtos(estoque, n);
 
-    // Libera a memória alocada
     free(estoque);
     estoque = NULL;
 

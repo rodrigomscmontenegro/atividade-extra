@@ -9,7 +9,6 @@ void aplicar_desconto(Produto *produto, float percentual) {
     produto->preco *= (1.0f - percentual / 100.0f);
 }
 
-// Percorre o array usando aritmética de ponteiros (sem colchetes)
 void imprimir_produtos(Produto *ptr, int quantidade) {
     printf("\n%-5s %-20s\n", "ID", "Preco");
     printf("---------------------------\n");
